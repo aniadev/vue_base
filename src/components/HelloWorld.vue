@@ -2,7 +2,11 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <ul class="data">
-      <li class="data-item" v-for="item in data" :key="item.id">
+      <li
+        class="data-item"
+        v-for="item in data"
+        :key="item.id"
+      >
         {{ item.title }}
       </li>
     </ul>
@@ -16,7 +20,6 @@ import {Component, Prop, Vue} from "vue-property-decorator"
 export default class HelloWorld extends Vue {
   @Prop() public msg!: string
   @Prop() public data!: Array<Record<string, any>>
-  
 }
 </script>
 
